@@ -8,6 +8,9 @@ import java.net.URL
 try {
 
 node{
+ tools {
+        maven 'Maven_3.5.2' 
+    }
  
  stage('Checkout') {
  git 'https://github.com/edureka-git/DevOpsClassCodes'
@@ -15,10 +18,8 @@ node{
  }
  stage('Build') {
  dir('') {
- withMaven(maven: 'mvn')
-  {
+ 
  sh 'mvn -B -V -U -e clean package'
-  }
  }
  }
  stage ('Email') {
