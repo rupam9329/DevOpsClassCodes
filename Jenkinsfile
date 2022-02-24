@@ -9,7 +9,7 @@ try {
 
 node{
  tools {
-        maven 'Maven_3.5.2' 
+        maven 'Maven_3.8.4' 
     }
  
  stage('Checkout') {
