@@ -16,7 +16,9 @@ node{
  stage('Build') {
  dir('') {
  withMaven(maven: 'mvn')
+  {
  sh 'mvn -B -V -U -e clean package'
+  }
  }
  }
  stage ('Email') {
